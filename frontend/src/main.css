@@ -1,0 +1,83 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Form styles */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+input[type="text"], 
+textarea, 
+select {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Button styles */
+button, 
+.Add {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+button:hover,
+.Add:hover {
+    background-color: #45a049;
+}
+
+/* Navigation buttons */
+.nav-buttons {
+    margin-bottom: 20px;
+}
+
+.nav-buttons button {
+    margin-right: 10px;
+}
+
+/* Tags */
+.tag {
+    display: inline-block;
+    background: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin: 2px;
+}
+
+.tag button {
+    background: none;
+    border: none;
+    color: #666;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+} 

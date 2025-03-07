@@ -1,0 +1,47 @@
+/* Assuming you have a container for the form */
+.todo-form-container {
+  max-width: 90%; /* Increase from whatever smaller value it currently has */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style for input fields and textareas */
+.todo-form input[type="text"],
+.todo-form textarea,
+.todo-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Make the description textarea wider */
+.todo-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Style for the tag and user mention containers */
+.tag-container,
+.mention-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.tag-container input,
+.mention-container input {
+  flex: 1;
+}
+
+/* Add Todo button styling */
+.add-todo-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+} 

@@ -1,0 +1,60 @@
+.todo-form-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.todo-form input[type="text"],
+.todo-form textarea,
+.todo-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.todo-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* For the tags and mentions sections */
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.input-group input {
+  flex: 1;
+}
+
+.input-group button {
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Add Todo button styling */
+.add-todo-btn {
+  padding: 12px 24px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.add-todo-btn:hover {
+  background-color: #3367d6;
+} 
