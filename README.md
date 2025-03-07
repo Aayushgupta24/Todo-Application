@@ -4,14 +4,16 @@ A full-stack todo application built with React and Node.js that allows users to 
 
 ## Features
 
-- 🔐 User authentication (register/login)
+- 🔐 User authentication (register/login/logout)
 - ✅ Create, read, update, and delete todos
 - 🏷️ Add tags to todos for better organization
 - 🎯 Set priority levels (low, medium, high)
 - 👥 Assign todos to multiple users
-- 📝 Add notes to todos
-- 🎨 Modern and responsive UI
+- 📝 Add notes and comments to todos
+- 📅 Set due dates and reminders
+- 🎨 Modern and responsive UI with animations
 - 🌓 Light/Dark mode support
+- 📊 Dashboard with task statistics
 
 ## Tech Stack
 
@@ -23,6 +25,7 @@ A full-stack todo application built with React and Node.js that allows users to 
 - Shadcn/ui components
 - Context API for state management
 - React Hook Form for form handling
+- React Query for data fetching and caching
 
 ### Backend
 
@@ -32,6 +35,7 @@ A full-stack todo application built with React and Node.js that allows users to 
 - Mongoose ODM
 - JWT for authentication
 - bcryptjs for password hashing
+- Nodemailer for email notifications
 
 ## Getting Started
 
@@ -58,15 +62,21 @@ npm install
 ```
 
 3. Configure Environment Variables
-   Create a `.env` file in the backend directory:
+   Create a `.env` file in the backend directory with the following:
 
-````
+```env
+MONGO_URI=mongodb://localhost:27017/todoapp
+JWT_SECRET=your_secret_key
+EMAIL_USER=your_email@example.com
+EMAIL_PASS=your_email_password
+```
 
 4. Install Frontend Dependencies
+
 ```bash
 cd ../frontend
 npm install
-````
+```
 
 ### Running the Application
 
@@ -95,6 +105,7 @@ The application will be available at:
 
 - `POST /api/users/register` - Register a new user
 - `POST /api/users/login` - Login user
+- `POST /api/users/logout` - Logout user
 - `GET /api/users` - Get all users
 
 ### Todos
@@ -107,31 +118,38 @@ The application will be available at:
 ### Notes
 
 - `POST /api/notes` - Add a note to a todo
+- `GET /api/notes/:todoId` - Get all notes for a todo
+
+### Notifications
+
+- `POST /api/notifications/send` - Send a notification email
 
 ## Data Models
 
 ### User
 
-- username (String, required, unique)
-- email (String, required, unique)
-- password (String, required, hashed)
+- `username` (String, required, unique)
+- `email` (String, required, unique)
+- `password` (String, required, hashed)
+- `createdAt` (Timestamp)
 
 ### Todo
 
-- title (String, required)
-- description (String)
-- priority (String: low/medium/high)
-- completed (Boolean)
-- user (Reference to User)
-- tags (Array of Strings)
-- assignedUsers (Array of User References)
-- timestamps
+- `title` (String, required)
+- `description` (String)
+- `priority` (String: low/medium/high)
+- `completed` (Boolean)
+- `user` (Reference to User)
+- `tags` (Array of Strings)
+- `assignedUsers` (Array of User References)
+- `dueDate` (Date)
+- `timestamps`
 
 ### Note
 
-- content (String, required)
-- todo (Reference to Todo)
-- timestamps
+- `content` (String, required)
+- `todo` (Reference to Todo)
+- `timestamps`
 
 ## Contributing
 
